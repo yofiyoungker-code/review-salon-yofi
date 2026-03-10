@@ -15,6 +15,7 @@
   button:hover { background: #1a6fd9; }
   button.copied { background: #4CAF50; }
   .note { font-size: 12px; color: #666; margin-top: 10px; }
+  .copy-hint { font-size: 11px; color: #999; margin-top: 5px; }
 </style>
 </head>
 <body>
@@ -33,6 +34,7 @@
       Recommended salon ⭐⭐⭐⭐⭐
     </p>
     <button onclick="copyAndGo('review1', this)">Copy & Review</button>
+    <p class="copy-hint">Tap & hold teks untuk copy manual jika tombol gagal</p>
   </div>
 
   <!-- REVIEW 2 -->
@@ -44,6 +46,7 @@
       Salon yang recommended di Sumberbaru ⭐⭐⭐⭐⭐
     </p>
     <button onclick="copyAndGo('review2', this)">Copy & Review</button>
+    <p class="copy-hint">Tap & hold teks untuk copy manual jika tombol gagal</p>
   </div>
 
   <!-- REVIEW 3 -->
@@ -55,6 +58,7 @@
       Recommended salon di Pakeman Batu Urip ⭐⭐⭐⭐⭐
     </p>
     <button onclick="copyAndGo('review3', this)">Copy & Review</button>
+    <p class="copy-hint">Tap & hold teks untuk copy manual jika tombol gagal</p>
   </div>
   
   <p class="note">⚠️ Jika tombol tidak membuka Google Maps, silakan copy teksnya dulu lalu buka Google Maps secara manual.</p>
@@ -65,8 +69,41 @@ function copyAndGo(id, btn) {
   var text = document.getElementById(id).innerText;
   var originalText = btn.innerText;
 
-  navigator.clipboard.writeText(text).then(function(){
-    btn.innerText = "✅ Teks Tersalin!";
+  // Coba clipboard API dulu
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function(){
+      btn.innerText = "✅ Tersalin!";
+      btn.classList.add("copied");
+      
+      setTimeout(function(){
+        window.open("https://search.google.com/local/writereview?placeid=ChIJ82jW_AqL1i0RBAsjYpWPZEU", "_blank");
+      }, 500);
+
+      setTimeout(function(){
+        btn.innerText = originalText;
+        btn.classList.remove("copied");
+      }, 2000);
+    }).catch(function(err){
+      fallbackCopy(text, btn, originalText);
+    });
+  } else {
+    // Fallback untuk browser lama
+    fallbackCopy(text, btn, originalText);
+  }
+}
+
+function fallbackCopy(text, btn, originalText) {
+  // Buat textarea sementara
+  var textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.select();
+  
+  try {
+    document.execCommand("copy");
+    btn.innerText = "✅ Tersalin!";
     btn.classList.add("copied");
     
     setTimeout(function(){
@@ -77,9 +114,11 @@ function copyAndGo(id, btn) {
       btn.innerText = originalText;
       btn.classList.remove("copied");
     }, 2000);
-  }).catch(function(err){
+  } catch (err) {
     alert("Gagal copy otomatis. Silakan copy manual ya! 🙏\n\nTeks: " + text);
-  });
+  }
+  
+  document.body.removeChild(textarea);
 }
 </script>
 
