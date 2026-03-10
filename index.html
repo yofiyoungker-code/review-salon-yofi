@@ -6,28 +6,105 @@
 <title>Review Salon Yofi</title>
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
-  .container { max-width: 700px; margin: 20px auto; padding: 25px; background: #ffffff; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
-  .header { text-align: center; margin-bottom: 30px; }
-  .header h1 { color: #e74c3c; margin: 0; font-size: 28px; text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3); }
-  .header p { color: #555; margin: 10px 0 0 0; font-size: 14px; }
+  body { margin: 0; padding: 0; background: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
+  .container { max-width: 700px; margin: 20px auto; padding: 25px; }
+  
+  /* HEADER MERAH PUTIH */
+  .header { 
+    text-align: center; 
+    margin-bottom: 30px; 
+    padding: 20px; 
+    background: #e74c3c; 
+    border-radius: 15px; 
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  }
+  .header h1 { 
+    color: white; 
+    margin: 0; 
+    font-size: 28px; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  .header p { 
+    color: white; 
+    margin: 10px 0 0 0; 
+    font-size: 14px; 
+  }
+  
   .service-section { margin-bottom: 25px; }
-  .service-title { color: #e74c3c; font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #e74c3c; padding-left: 10px; }
-  .review-box { border: 1px solid #e74c3c; padding: 15px; margin: 10px 0; border-radius: 10px; background: #fff5f5; text-align: left; }
-  .review-text { margin: 0 0 15px 0; color: #333; line-height: 1.6; }
-  .review-text .placeholder { color: #e74c3c; font-weight: bold; }
-  button { padding: 10px 20px; background: #e74c3c; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; transition: all 0.3s; width: 100%; }
-  button:hover { background: #c0392b; transform: translateY(-2px); }
-  button.copied { background: #27ae60; }
-  .note { font-size: 12px; color: #666; margin-top: 10px; text-align: center; }
-  .paste-instruction { font-size: 11px; color: #e74c3c; margin-top: 5px; font-weight: bold; }
-  .scroll-hint { text-align: center; color: #666; font-size: 12px; margin-top: 20px; }
-  .copy-hint { font-size: 11px; color: #999; margin-top: 5px; }
+  .service-title { 
+    color: #e74c3c; 
+    font-size: 18px; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    border-left: 4px solid #e74c3c; 
+    padding-left: 10px; 
+  }
+  .review-box { 
+    border: 2px solid #e74c3c; 
+    padding: 15px; 
+    margin: 10px 0; 
+    border-radius: 10px; 
+    background: #ffffff; 
+    text-align: left; 
+  }
+  .review-text { 
+    margin: 0 0 15px 0; 
+    color: #333; 
+    line-height: 1.6; 
+  }
+  .review-text .placeholder { 
+    color: #e74c3c; 
+    font-weight: bold; 
+  }
+  button { 
+    padding: 12px 20px; 
+    background: #e74c3c; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: all 0.3s; 
+    width: 100%; 
+    font-weight: bold;
+  }
+  button:hover { 
+    background: #c0392b; 
+    transform: translateY(-2px); 
+  }
+  button.copied { 
+    background: #27ae60; 
+  }
+  .note { 
+    font-size: 12px; 
+    color: #666; 
+    margin-top: 10px; 
+    text-align: center; 
+  }
+  .paste-instruction { 
+    font-size: 11px; 
+    color: #e74c3c; 
+    margin-top: 5px; 
+    font-weight: bold; 
+  }
+  .scroll-hint { 
+    text-align: center; 
+    color: #666; 
+    font-size: 12px; 
+    margin-top: 20px; 
+  }
+  .copy-hint { 
+    font-size: 11px; 
+    color: #999; 
+    margin-top: 5px; 
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
+  <!-- HEADER -->
   <div class="header">
     <h1>⭐ Review Salon Yofi ⭐</h1>
     <p>Terima kasih sudah berkunjung! Pilih ulasan yang sesuai, klik copy & review, lalu pastekan di Google Maps 🙏</p>
@@ -241,11 +318,143 @@
     </div>
   </div>
 
-  <!-- 9. RIAS WISUDA -->
+   <!-- 9. RIAS WISUDA -->
   <div class="service-section">
     <div class="service-title">9. Rias Wisuda</div>
     <div class="review-box">
-      <p class="review-text" id="r9-1">
-        Rias wisuda di Salon Yofi hasilnya <span class="placeholder">................</span>. Makeupnya cantik dan sesuai tema.
-      </p>
-      <button onclick="copyAndGo
+      <p class="review-text" id="r9-1">Rias wisuda di Salon Yofi hasilnya <span class="placeholder">................</span>. Makeupnya cantik dan sesuai tema.</p>
+      <button onclick="copyAndGo('r9-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r9-2">Rias wisuda di sini <span class="placeholder">................</span>. Makeupnya natural dan tahan lama seharian.</p>
+      <button onclick="copyAndGo('r9-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r9-3">Rias wisuda di Salon Yofi <span class="placeholder">................</span>. Hasilnya sesuai ekspektasi dan sangat memuaskan!</p>
+      <button onclick="copyAndGo('r9-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
+
+  <!-- 10. RIAS KARNIVAL -->
+  <div class="service-section">
+    <div class="service-title">10. Rias Karnaval</div>
+    <div class="review-box">
+      <p class="review-text" id="r10-1">Rias karnaval di Salon Yofi hasilnya <span class="placeholder">................</span>. Makeupnya kreatif dan tahan lama.</p>
+      <button onclick="copyAndGo('r10-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r10-2">Rias karnaval di sini <span class="placeholder">................</span>. Makeupnya unik dan sesuai tema acara.</p>
+      <button onclick="copyAndGo('r10-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r10-3">Rias karnaval di Salon Yofi <span class="placeholder">................</span>. Hasilnya memuaskan dan staffnya ramah!</p>
+      <button onclick="copyAndGo('r10-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
+
+  <!-- 11. RIAS TUNANGAN -->
+  <div class="service-section">
+    <div class="service-title">11. Rias Tunangan</div>
+    <div class="review-box">
+      <p class="review-text" id="r11-1">Rias tunangan di Salon Yofi hasilnya <span class="placeholder">................</span>. Makeupnya manis dan natural.</p>
+      <button onclick="copyAndGo('r11-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r11-2">Rias tunangan di sini <span class="placeholder">................</span>. Makeupnya cantik dan tahan lama.</p>
+      <button onclick="copyAndGo('r11-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r11-3">Rias tunangan di Salon Yofi <span class="placeholder">................</span>. Hasilnya sesuai ekspektasi dan sangat memuaskan!</p>
+      <button onclick="copyAndGo('r11-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
+
+  <!-- 12. DEKORASI -->
+  <div class="service-section">
+    <div class="service-title">12. Dekorasi</div>
+    <div class="review-box">
+      <p class="review-text" id="r12-1">Dekorasi di Salon Yofi hasilnya <span class="placeholder">................</span>. Tempatnya indah dan sesuai tema.</p>
+      <button onclick="copyAndGo('r12-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r12-2">Dekorasi di sini <span class="placeholder">................</span>. Hasilnya cantik dan staffnya sangat profesional.</p>
+      <button onclick="copyAndGo('r12-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r12-3">Dekorasi di Salon Yofi <span class="placeholder">................</span>. Hasilnya sesuai ekspektasi dan sangat memuaskan!</p>
+      <button onclick="copyAndGo('r12-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
+
+  <p class="note">⚠️ Jika paste gagal, copy teks manual lalu buka Google Maps → Cari Salon Yofi → Write a review → Tap & hold → Paste</p>
+</div>
+
+<script>
+function copyAndGo(id, btn) {
+  var text = document.getElementById(id).innerText;
+  var originalText = btn.innerText;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function(){
+      btn.innerText = "✅ Tersalin!";
+      btn.classList.add("copied");
+      
+      setTimeout(function(){
+        window.open("https://search.google.com/local/writereview?placeid=ChIJ82jW_AqL1i0RBAsjYpWPZEU", "_blank");
+      }, 500);
+
+      setTimeout(function(){
+        btn.innerText = originalText;
+        btn.classList.remove("copied");
+      }, 2000);
+    }).catch(function(err){
+      fallbackCopy(text, btn, originalText);
+    });
+  } else {
+    fallbackCopy(text, btn, originalText);
+  }
+}
+
+function fallbackCopy(text, btn, originalText) {
+  var textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.select();
+  
+  try {
+    document.execCommand("copy");
+    btn.innerText = "✅ Tersalin!";
+    btn.classList.add("copied");
+    
+    setTimeout(function(){
+      window.open("https://search.google.com/local/writereview?placeid=ChIJ82jW_AqL1i0RBAsjYpWPZEU", "_blank");
+    }, 500);
+
+    setTimeout(function(){
+      btn.innerText = originalText;
+      btn.classList.remove("copied");
+    }, 2000);
+  } catch (err) {
+    alert("Gagal copy otomatis. Silakan copy manual ya! 🙏\n\nTeks: " + text);
+  }
+  
+  document.body.removeChild(textarea);
+}
+</script>
+
+</body>
+</html>
