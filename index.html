@@ -5,122 +5,257 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Review Salon Yofi</title>
 <style>
-  body { margin: 0; padding: 0; background: #f5f5f5; font-family: Arial, sans-serif; }
-  .container { max-width: 700px; margin: 20px auto; padding: 20px; background: #fafafa; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-  h2 { color: #b07a4f; margin-top: 0; }
-  p { color: #333; line-height: 1.6; }
-  .review-box { border: 1px solid #eee; padding: 15px; margin: 15px 0; border-radius: 10px; background: white; text-align: left; }
-  .review-text { margin: 0 0 15px 0; }
-  button { padding: 10px 20px; background: #2d7ff9; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; transition: background 0.3s; }
-  button:hover { background: #1a6fd9; }
-  button.copied { background: #4CAF50; }
-  .note { font-size: 12px; color: #666; margin-top: 10px; }
-  .copy-hint { font-size: 11px; color: #999; margin-top: 5px; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
+  .container { max-width: 700px; margin: 20px auto; padding: 25px; background: #ffffff; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+  .header { text-align: center; margin-bottom: 30px; }
+  .header h1 { color: #e74c3c; margin: 0; font-size: 28px; text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3); }
+  .header p { color: #555; margin: 10px 0 0 0; font-size: 14px; }
+  .service-section { margin-bottom: 25px; }
+  .service-title { color: #e74c3c; font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #e74c3c; padding-left: 10px; }
+  .review-box { border: 1px solid #e74c3c; padding: 15px; margin: 10px 0; border-radius: 10px; background: #fff5f5; text-align: left; }
+  .review-text { margin: 0 0 15px 0; color: #333; line-height: 1.6; }
+  .review-text .placeholder { color: #e74c3c; font-weight: bold; }
+  button { padding: 10px 20px; background: #e74c3c; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; transition: all 0.3s; width: 100%; }
+  button:hover { background: #c0392b; transform: translateY(-2px); }
+  button.copied { background: #27ae60; }
+  .note { font-size: 12px; color: #666; margin-top: 10px; text-align: center; }
+  .paste-instruction { font-size: 11px; color: #e74c3c; margin-top: 5px; font-weight: bold; }
+  .scroll-hint { text-align: center; color: #666; font-size: 12px; margin-top: 20px; }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>Review Salon Yofi</h2>
-  <p>Terima kasih sudah berkunjung 🙏</p>
-  <p>Pilih salah satu ulasan di bawah ini, klik tombol lalu tempel di Google Maps ⭐⭐⭐⭐⭐</p>
-
-  <!-- REVIEW 1 -->
-  <div class="review-box">
-    <p class="review-text" id="review1">
-      Salon Yofi di Pakeman Batu Urip Kecamatan Sumberbaru sangat bagus.
-      Potong rambut rapi dan hasilnya sesuai keinginan.
-      Tempatnya bersih dan pelayanannya ramah.
-      Recommended salon ⭐⭐⭐⭐⭐
-    </p>
-    <button onclick="copyAndGo('review1', this)">Copy & Review</button>
-    <p class="copy-hint">Tap & hold teks untuk copy manual jika tombol gagal</p>
+  <div class="header">
+    <h1>⭐ Review Salon Yofi ⭐</h1>
+    <p>Terima kasih sudah berkunjung! Pilih ulasan yang sesuai, klik copy & review, lalu pastekan di Google Maps 🙏</p>
   </div>
 
-  <!-- REVIEW 2 -->
-  <div class="review-box">
-    <p class="review-text" id="review2">
-      Hair treatment di Salon Yofi hasilnya memuaskan.
-      Rambut terasa lebih halus dan sehat setelah perawatan.
-      Pelayanan juga sangat ramah dan profesional.
-      Salon yang recommended di Sumberbaru ⭐⭐⭐⭐⭐
-    </p>
-    <button onclick="copyAndGo('review2', this)">Copy & Review</button>
-    <p class="copy-hint">Tap & hold teks untuk copy manual jika tombol gagal</p>
+  <!-- 1. SMOOTHING KERATIN -->
+  <div class="service-section">
+    <div class="service-title">1. Smoothing Keratin</div>
+    <div class="review-box">
+      <p class="review-text" id="r1-1">
+        Smoothing keratin di Salon Yofi hasilnya <span class="placeholder">................</span>. Rambut jadi lebih halus dan mudah diatur. Staff sangat ramah dan profesional. Recommended banget!
+      </p>
+      <button onclick="copyAndGo('r1-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r1-2">
+        Awalnya rambut <span class="placeholder">................</span>, setelah smoothing keratin jadi <span class="placeholder">................</span>. Hasilnya memuaskan dan harga terjangkau.
+      </p>
+      <button onclick="copyAndGo('r1-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r1-3">
+        Salon Yofi tempatnya <span class="placeholder">................</span>. Smoothing keratinnya bagus, rambut jadi <span class="placeholder">................</span>. Pasti balik lagi!
+      </p>
+      <button onclick="copyAndGo('r1-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
   </div>
 
-  <!-- REVIEW 3 -->
-  <div class="review-box">
-    <p class="review-text" id="review3">
-      Smoothing di Salon Yofi hasilnya bagus sekali.
-      Rambut jadi lebih halus dan mudah diatur.
-      Tempatnya nyaman dan staff sangat ramah.
-      Recommended salon di Pakeman Batu Urip ⭐⭐⭐⭐⭐
-    </p>
-    <button onclick="copyAndGo('review3', this)">Copy & Review</button>
-    <p class="copy-hint">Tap & hold teks untuk copy manual jika tombol gagal</p>
+  <!-- 2. HAIR COLOR -->
+  <div class="service-section">
+    <div class="service-title">2. Hair Color</div>
+    <div class="review-box">
+      <p class="review-text" id="r2-1">
+        Hair color di Salon Yofi warnanya <span class="placeholder">................</span>. Sesuai dengan yang diinginkan, hasilnya natural dan tidak merusak rambut.
+      </p>
+      <button onclick="copyAndGo('r2-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r2-2">
+        Mau coba hair color baru, akhirnya pilih Salon Yofi. Warnanya <span class="placeholder">................</span>, hasilnya <span class="placeholder">................</span>.
+      </p>
+      <button onclick="copyAndGo('r2-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r2-3">
+        Hair color di sini <span class="placeholder">................</span>. Staffnya sabar dan hasilnya sesuai ekspektasi. Recommended!
+      </p>
+      <button onclick="copyAndGo('r2-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
   </div>
-  
-  <p class="note">⚠️ Jika tombol tidak membuka Google Maps, silakan copy teksnya dulu lalu buka Google Maps secara manual.</p>
-</div>
 
-<script>
-function copyAndGo(id, btn) {
-  var text = document.getElementById(id).innerText;
-  var originalText = btn.innerText;
+  <!-- 3. TONING WARNA -->
+  <div class="service-section">
+    <div class="service-title">3. Toning Warna</div>
+    <div class="review-box">
+      <p class="review-text" id="r3-1">
+        Toning warna di Salon Yofi hasilnya <span class="placeholder">................</span>. Rambut jadi lebih cerah dan sehat.
+      </p>
+      <button onclick="copyAndGo('r3-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r3-2">
+        Awalnya rambut kusam, setelah toning jadi <span class="placeholder">................</span>. Hasilnya memuaskan banget!
+      </p>
+      <button onclick="copyAndGo('r3-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r3-3">
+        Toning warna di Salon Yofi <span class="placeholder">................</span>. Staffnya ramah dan hasilnya sesuai yang diharapkan.
+      </p>
+      <button onclick="copyAndGo('r3-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
 
-  // Coba clipboard API dulu
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(function(){
-      btn.innerText = "✅ Tersalin!";
-      btn.classList.add("copied");
-      
-      setTimeout(function(){
-        window.open("https://search.google.com/local/writereview?placeid=ChIJ82jW_AqL1i0RBAsjYpWPZEU", "_blank");
-      }, 500);
+  <!-- 4. POTONG RAMBUT -->
+  <div class="service-section">
+    <div class="service-title">4. Potong Rambut</div>
+    <div class="review-box">
+      <p class="review-text" id="r4-1">
+        Potong rambut di Salon Yofi hasilnya <span class="placeholder">................</span>. Stylingnya rapi dan sesuai permintaan.
+      </p>
+      <button onclick="copyAndGo('r4-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r4-2">
+        Mau potong rambut, pilih Salon Yofi. Hasilnya <span class="placeholder">................</span>. Staffnya sangat profesional.
+      </p>
+      <button onclick="copyAndGo('r4-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r4-3">
+        Potong rambut di sini <span class="placeholder">................</span>. Hasilnya rapi dan harga terjangkau. Pasti balik lagi!
+      </p>
+      <button onclick="copyAndGo('r4-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
 
-      setTimeout(function(){
-        btn.innerText = originalText;
-        btn.classList.remove("copied");
-      }, 2000);
-    }).catch(function(err){
-      fallbackCopy(text, btn, originalText);
-    });
-  } else {
-    // Fallback untuk browser lama
-    fallbackCopy(text, btn, originalText);
-  }
-}
+  <!-- 5. FACIAL -->
+  <div class="service-section">
+    <div class="service-title">5. Facial</div>
+    <div class="review-box">
+      <p class="review-text" id="r5-1">
+        Facial di Salon Yofi hasilnya <span class="placeholder">................</span>. Kulit jadi lebih cerah dan sehat.
+      </p>
+      <button onclick="copyAndGo('r5-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r5-2">
+        Facial di sini <span class="placeholder">................</span>. Staffnya ramah dan hasilnya memuaskan.
+      </p>
+      <button onclick="copyAndGo('r5-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r5-3">
+        Facial di Salon Yofi <span class="placeholder">................</span>. Kulit jadi lebih glowing dan sehat. Recommended!
+      </p>
+      <button onclick="copyAndGo('r5-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
 
-function fallbackCopy(text, btn, originalText) {
-  // Buat textarea sementara
-  var textarea = document.createElement("textarea");
-  textarea.value = text;
-  textarea.style.position = "fixed";
-  textarea.style.opacity = "0";
-  document.body.appendChild(textarea);
-  textarea.select();
-  
-  try {
-    document.execCommand("copy");
-    btn.innerText = "✅ Tersalin!";
-    btn.classList.add("copied");
-    
-    setTimeout(function(){
-      window.open("https://search.google.com/local/writereview?placeid=ChIJ82jW_AqL1i0RBAsjYpWPZEU", "_blank");
-    }, 500);
+  <!-- 6. HAIR TREATMENT -->
+  <div class="service-section">
+    <div class="service-title">6. Hair Treatment</div>
+    <div class="review-box">
+      <p class="review-text" id="r6-1">
+        Hair treatment di Salon Yofi hasilnya <span class="placeholder">................</span>. Rambut jadi lebih sehat dan berkilau.
+      </p>
+      <button onclick="copyAndGo('r6-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r6-2">
+        Rambut rusak karena sering catok, setelah treatment jadi <span class="placeholder">................</span>. Hasilnya memuaskan!
+      </p>
+      <button onclick="copyAndGo('r6-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r6-3">
+        Hair treatment di Salon Yofi <span class="placeholder">................</span>. Staffnya profesional dan hasilnya sesuai ekspektasi.
+      </p>
+      <button onclick="copyAndGo('r6-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
 
-    setTimeout(function(){
-      btn.innerText = originalText;
-      btn.classList.remove("copied");
-    }, 2000);
-  } catch (err) {
-    alert("Gagal copy otomatis. Silakan copy manual ya! 🙏\n\nTeks: " + text);
-  }
-  
-  document.body.removeChild(textarea);
-}
-</script>
+  <!-- 7. CUCI CATOK -->
+  <div class="service-section">
+    <div class="service-title">7. Cuci Catok</div>
+    <div class="review-box">
+      <p class="review-text" id="r7-1">
+        Cuci catok di Salon Yofi hasilnya <span class="placeholder">................</span>. Rambut jadi rapi dan mudah diatur.
+      </p>
+      <button onclick="copyAndGo('r7-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r7-2">
+        Cuci catok di sini <span class="placeholder">................</span>. Hasilnya rapi dan staffnya ramah.
+      </p>
+      <button onclick="copyAndGo('r7-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r7-3">
+        Cuci catok di Salon Yofi <span class="placeholder">................</span>. Harga terjangkau dan hasilnya memuaskan.
+      </p>
+      <button onclick="copyAndGo('r7-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
 
-</body>
-</html>
+  <!-- 8. RIAS PENGANTIN -->
+  <div class="service-section">
+    <div class="service-title">8. Rias Pengantin</div>
+    <div class="review-box">
+      <p class="review-text" id="r8-1">
+        Rias pengantin di Salon Yofi hasilnya <span class="placeholder">................</span>. Makeupnya natural dan tahan lama.
+      </p>
+      <button onclick="copyAndGo('r8-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r8-2">
+        Rias pengantin di sini <span class="placeholder">................</span>. Makeupnya cantik dan staffnya sangat profesional.
+      </p>
+      <button onclick="copyAndGo('r8-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r8-3">
+        Rias pengantin di Salon Yofi <span class="placeholder">................</span>. Hasilnya sesuai ekspektasi dan sangat memuaskan!
+      </p>
+      <button onclick="copyAndGo('r8-3', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+  </div>
+
+  <!-- 9. RIAS WISUDA -->
+  <div class="service-section">
+    <div class="service-title">9. Rias Wisuda</div>
+    <div class="review-box">
+      <p class="review-text" id="r9-1">
+        Rias wisuda di Salon Yofi hasilnya <span class="placeholder">................</span>. Makeupnya cantik dan sesuai tema.
+      </p>
+      <button onclick="copyAndGo('r9-1', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r9-2">
+        Rias wisuda di sini <span class="placeholder">................</span>. Makeupnya natural dan tahan lama seharian.
+      </p>
+      <button onclick="copyAndGo('r9-2', this)">Copy & Review</button>
+      <p class="paste-instruction">📋 Paste di kolom ulasan Google Maps</p>
+    </div>
+    <div class="review-box">
+      <p class="review-text" id="r
